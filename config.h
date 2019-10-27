@@ -7,3 +7,4 @@
 //#define TAPPING_TERM 400
 
 #define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_TOGGLE 2
