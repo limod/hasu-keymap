@@ -37,8 +37,8 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   //Tap once for Esc, twice for Caps Lock
 //  [TD_COMMA]  = ACTION_TAP_DANCE_DOUBLE(KC_COMMA,DE_SCLN),
   [TD_SHIFT]  = ACTION_TAP_DANCE_DOUBLE(KC_LSHIFT, KC_CAPSLOCK),
-  [TD_PGUP]  = ACTION_TAP_DANCE_DOUBLE(KC_N,KC_PGUP),
-  [TD_PGDN]  = ACTION_TAP_DANCE_DOUBLE(KC_M,KC_PGDN),
+//  [TD_PGUP]  = ACTION_TAP_DANCE_DOUBLE(KC_N,KC_PGUP),
+//  [TD_PGDN]  = ACTION_TAP_DANCE_DOUBLE(KC_M,KC_PGDN),
 //  [TD_PGDN]  = ACTION_TAP_DANCE_DOUBLE(KC_C,KC_PGDN),
 //  [TD_ARROW_LEFT]  = ACTION_TAP_DANCE_DOUBLE(KC_N,KC_LEFT),
 //  [TD_ARROW_RIGHT]  = ACTION_TAP_DANCE_DOUBLE(KC_M,KC_RIGHT),
@@ -74,8 +74,8 @@ const uint16_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
     KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,   KC_6,   KC_7,   KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_JYEN, KC_BSPC,     KC_INS,  KC_HOME, KC_PGUP,    KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS,    KC_STOP, KC_AGIN,
     KC_TAB,  KC_Q,    LT(NAV,KC_W),    KC_E,    KC_R,    KC_T,   KC_Y,   KC_U,   LT(MOUSE,KC_I), LT(SYMBS,KC_O),    KC_P,    KC_LBRC, KC_RBRC,          KC_BSLS,     KC_DEL,  KC_END,  KC_PGDN,    KC_P7,   KC_P8,   KC_P9,   KC_PPLS,    KC_MENU, KC_UNDO,
     TT(NAV), KC_A,    MT(MOD_LALT,KC_S), MT(MOD_LSFT,KC_D),  MT(MOD_LCTL,KC_F),    MT(MOD_LGUI,KC_G),   MT(MOD_LGUI,KC_H),   MT(MOD_LCTL,KC_J),  MT(MOD_LSFT, KC_K),	MT(MOD_LALT,KC_L),    KC_SCLN, KC_QUOT,          KC_NUHS, KC_ENT,                                    KC_P4,   KC_P5,   KC_P6,   KC_PCMM,    KC_SLCT, KC_COPY,
-    TD(TD_SHIFT), KC_NUBS, KC_Z,     KC_X,  KC_C,    KC_V,   KC_B,    TD(TD_PGUP),   TD(TD_PGDN), KC_COMMA, KC_DOT,  KC_SLSH,          KC_RO,   KC_RSFT,              KC_UP,               KC_P1,   KC_P2,   KC_P3,   KC_PEQL,    KC_EXEC, KC_PSTE,
-    KC_LALT, KC_LGUI, KC_LCTL, KC_MHEN, KC_HANJ,         KC_SPC,         KC_HAEN, KC_HENK, KC_KANA, KC_RALT, TT(MOUSE), TT(SYMBS),  KC_RCTL,     KC_LEFT, KC_DOWN, KC_RGHT,    KC_P0,            KC_PDOT, KC_PENT,    KC_FIND, KC_CUT
+    TD(TD_SHIFT), KC_NUBS, KC_Z,     KC_X,  KC_C,    KC_V,   KC_B,    KC_N,   KC_M, KC_COMMA, KC_DOT,  KC_SLSH,          KC_RO,   KC_RSFT,              KC_UP,               KC_P1,   KC_P2,   KC_P3,   KC_PEQL,    KC_EXEC, KC_PSTE,
+    KC_LALT, KC_LGUI, KC_LCTL, KC_MHEN, KC_HANJ,         LT(NAV,KC_SPC),         KC_HAEN, KC_HENK, KC_KANA, KC_RALT, TT(MOUSE), TT(SYMBS),  KC_RCTL,     KC_LEFT, KC_DOWN, KC_RGHT,    KC_P0,            KC_PDOT, KC_PENT,    KC_FIND, KC_CUT
     ),
     [MOUSE] = LAYOUT_all(
                       ______,  ______,  ______, ______, ______,  ______,  ______, ______,  ______, ______, ______, ______,
@@ -91,8 +91,8 @@ const uint16_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
     ______,           ______,  ______,  ______, ______, ______,  ______,  ______, ______,  ______, ______, ______, ______,             ______,______,______,    ______,______,______,______,    ______,
     ______,  ______,  ______,  ______,  ______, ______, ______,  DE_LCBR, ______, ______,  DE_RCBR, ______, ______, ______, ______,     ______,______,______,    ______,______,______,______,    ______,______,
     ______,  ______,  ______,  ______,  ______, ______, ______,  S(LGUI(KC_LEFT)),  S(LGUI(KC_RIGHT)), S(LGUI(KC_PGUP)),S(LGUI(KC_PGDN)), ______, ______,         ______,     ______,______,______,    ______,______,______,______,    ______,______,
-    ______,  ______,  ______,  ______,  ______, ______, ______,  ______,  ______, ______,  ______, ______,         ______, ______,                              ______,______,______,______,    ______,______,
-    ______,  ______,  ______,  ______,  ______, ______, KC_HOME,  KC_LEFT, KC_RIGHT, KC_UP, KC_DOWN,  KC_END,         ______, ______,            ______,           ______,______,______,______,    ______,______,
+    ______,  ______,  ______,  ______,  ______, ______, KC_HOME,  KC_LEFT, KC_RIGHT, KC_UP, KC_DOWN,  KC_END,  ______, ______,                              ______,______,______,______,    ______,______,
+    ______,  ______,  ______,  ______,  ______, ______, ______,  KC_PGUP, KC_PGDN, ______,  ______, ______,     ______, ______,            ______,           ______,______,______,______,    ______,______,
     ______,  ______,  ______,  ______,  ______,         ______,           ______, ______,  ______, ______, ______, ______, ______,     ______,______,______,    ______,       ______,______,    ______,______
     ),
     [SYMBS] = LAYOUT_all(
